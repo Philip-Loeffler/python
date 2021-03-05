@@ -10,10 +10,14 @@ if guess < answer:
     guess = int(input())
     if guess == answer:
         print("well done, you guessed it")
+    else:
+        print("sorry not guess correctly")
 elif guess > answer:
     print("please guess lower")
     guess = int(input())
     if guess == answer:
         print("well done, you guess it")
+    else:
+        print("you have not guess correctly")
 else:
     print("you got it the first time")

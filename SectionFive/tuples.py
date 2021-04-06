@@ -42,3 +42,15 @@ metallica2[0] = "master of puppets"
 # using a tuple, for things that shouldnt change, can help to prevent bugs in your program
 # if you code attempts to change one of the fields in a tuple, your code will fail, that will
 # highlight something that your code probably should not be doing
+
+title, artist, year = metallica
+print(title)
+print(artist)
+print(year)
+
+table = ("coffee table", 200, 100, 75, 34.50)
+print(table[1] * table[2])
+
+# unpack the tuple into variables and using those variable names into our code
+name, length, width, height, price = table
+print(length * width)

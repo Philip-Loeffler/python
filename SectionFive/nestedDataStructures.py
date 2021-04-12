@@ -53,3 +53,9 @@ print(songs)
 songs = songs[1]
 print(songs)
 print(songs[1])
+
+mayhem = albums[3][3][2][1]
+print(mayhem)
+
+print(albums[3])
+print(albums[3][3][2])

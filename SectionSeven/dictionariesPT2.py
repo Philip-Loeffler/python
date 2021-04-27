@@ -60,3 +60,32 @@ fruit_keys = fruit.keys()
 print(fruit_keys)
 fruit["tomato"] = "not nice with ice cream"
 print(fruit_keys)
+
+
+print(fruit.items())
+# producing a tuple
+f_tuple = tuple(fruit.items())
+print(f_tuple)
+
+for snack in f_tuple:
+    item, description = snack
+    print(item + "is" + description)
+
+# producing a dictionary from a tuple
+print(dict(f_tuple))
+
+
+# join method
+
+# this is a poor way to join strings together
+myList = ["a", "b", "c", "d"]
+newString = ''
+for c in myList:
+    newString += c + ", "
+
+print(newString)
+
+# using the join method
+myList = ["a", "b", "c", "d"]
+newString = ", ".join(myList)
+print(newString)

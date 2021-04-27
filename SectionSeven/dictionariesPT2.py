@@ -31,3 +31,32 @@ ordered_keys = list(fruit.keys())
 ordered_keys.sort()
 for f in ordered_keys:
     print(f + " - " + fruit[f])
+
+
+# can also achieve with
+ordered_keys = sorted(list(fruit.keys()))
+for f in ordered_keys:
+    print(f + " - " + fruit[f])
+
+# can achieve with this as well
+
+for f in sorted(fruit.keys()):
+    print(f + " - " + fruit[f])
+
+# if you dont want to sort
+for f in fruit:
+    print(f + " - " + fruit[f])
+
+# for just the values
+for val in fruit.values():
+    print(val)
+
+# this is far more efficent
+for key in fruit:
+    print(fruit[key])
+
+
+fruit_keys = fruit.keys()
+print(fruit_keys)
+fruit["tomato"] = "not nice with ice cream"
+print(fruit_keys)

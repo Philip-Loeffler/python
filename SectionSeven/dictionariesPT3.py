@@ -15,15 +15,17 @@ exits = [{"Q": 0},
 
 loc = 1
 while True:
-    availableExits = ""
-    for direction in exits[loc].keys():
-        availableExits += direction + ", "
+    # can use this one line of code instead of the three below
+    availableExits = ", ".join(exits[loc].keys())
+    # availableExits = ""
+    # for direction in exits[loc].keys():
+    #     availableExits += direction + ", "
     print(locations[loc])
 
     if loc == 0:
         break
 
-    direction = input("Available exists are" + availableExits).upper()
+    direction = input("Available exits are" + availableExits).upper()
     print()
     if direction in exits[loc]:
         loc = exits[loc][direction]

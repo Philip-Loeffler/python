@@ -45,3 +45,5 @@ for x in range(-100, 100):
     plot(canvas, x, -y)
 
 mainWindow.mainloop()
+# for scope purposes, just remember that a function can use the variables from the main program,
+# but the main program cannot see the variables within that function

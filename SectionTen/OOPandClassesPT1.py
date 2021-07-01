@@ -9,7 +9,7 @@ class Kettle(object):
 
 
 # instance, is just an object being created from a class
-# kenwood is an instanxe of the kettle class
+# kenwood is an instance of the kettle class
 kenwood = Kettle("Kenwood", 8.99)
 print(kenwood.make)
 print(kenwood.price)

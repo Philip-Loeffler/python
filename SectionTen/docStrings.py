@@ -2,7 +2,7 @@
 class Song:
     """class to represent a song
 
-    Attributes: 
+    Attributes:
      title: string, the title of the song
      artist: artist, an artist object representing the song creator
      duration: int, the duration of the song in seconds. may be zero
@@ -39,26 +39,51 @@ class Album:
     addsong: used to add a new song to the albums track list
     """
 
+    def __init__(self, name, year, artist=None):
+        self.name = name
+        self.year = year
+        if artist is None:
+            self.artist = artist("Various Artists")
+        else:
+            self.artist = artist
 
-def __init__(self, name, year, artist=None):
-    self.name = name
-    self.year = year
-    if artist is None:
-        self.artist = artist("Various Artists")
-    else:
-        self.artist = artist
+        self.tracks = []
 
-    self.tracks = []
-
-
-def add_song(self, song, position=None):
-    """ adds a song to the track list
-    Args:
+    def add_song(self, song, position=None):
+        """ adds a song to the track list
+        Args:
         song, song, a song to add
-        position, optional int, if specified the song will be added to that position in the track list - inserting 
+        position, optional int, if specified the song will be added to that position in the track list - inserting
         it between other song if necessary. otherwise, the song will be added to the end of the list
-    """
-    if position is None:
-        self.tracks.append(song)
-    else:
-        self.tracks.insert(position, song)
+        """
+        if position is None:
+            self.tracks.append(song)
+        else:
+            self.tracks.insert(position, song)
+
+
+class Artist:
+    """basic class to store artist details
+
+      Attributes:
+      name: string, the name of the artist
+      albums: list of albums, A list of the albums by the artist
+          the lsit includes only those albums in this collection, it
+          is not an exhaustive list of the artists published albums
+
+      methods:
+      add_album: used to add a new album to the artists album list
+      """
+
+    def __init__(self, name):
+        self.name = name
+        self.albums = []
+
+    def add_album(self, album):
+        """ add a new album to the list. 
+        Args:
+            album(album): album object to add to the list.
+            if the album is already present, make sure it isnt
+            added again.
+        """
+        self.albums.append(album)

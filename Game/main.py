@@ -15,3 +15,9 @@ print(phil)
 
 phil.lives -= 1
 print(phil)
+
+phil._lives = 9
+print(phil)
+
+phil.level = 10
+print(phil)

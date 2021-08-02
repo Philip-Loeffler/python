@@ -4,7 +4,7 @@ class Player(object):
         self.name = name
         self._lives = 3
         self._level = 1
-        self.score = 1000
+        self._score = 1000
 
     # underscore is suppose to represent to the user, not to call these methods
     # it also hides the attribute
@@ -18,15 +18,13 @@ class Player(object):
             print("lives cannot be negative")
             self._lives = 0
 
-    lives = property(_get_lives, _set_lives)
-
     def _get_level(self):
         return self._level
 
     def _set_level(self, level):
         if level > 0:
             delta = level - self._level
-            self.score += delta * 1000
+            self._score += delta * 1000
             self._level = level
         else:
             print("level cant bne less than 1")
@@ -36,6 +34,16 @@ class Player(object):
     # it will return that object with the values of its properties
 
     level = property(_get_level, _set_level)
+    lives = property(_get_lives, _set_lives)
+
+    # decorator for defining properties
+    @property
+    def score(self):
+        return self._score
+
+    @score.setter
+    def score(self, score):
+        self._score = score
 
     def __str__(self):
         return "name: {0.name}, lives: {0.lives}, level: {0.level}, score {0.score}".format(self)

@@ -1,23 +1,10 @@
 from player import Player
+from enemy import Enemy
 
 phil = Player("Phil")
 
-print(phil.name)
-print(phil.lives)
-phil.lives -= 1
-print(phil)
+random_monster = Enemy("basic enemy", 12, 1)
+print(random_monster)
 
-phil.lives -= 1
-print(phil)
-
-phil.lives -= 1
-print(phil)
-
-phil.lives -= 1
-print(phil)
-
-phil._lives = 9
-print(phil)
-
-phil.level = 10
-print(phil)
+random_monster.take_damage(4)
+print(random_monster)

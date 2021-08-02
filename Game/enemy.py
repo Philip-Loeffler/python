@@ -22,3 +22,4 @@ class Enemy:
 
 # this is how you create a subclass. Troll is inheriting from enemy
 class Troll(Enemy):
+    pass

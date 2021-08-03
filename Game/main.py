@@ -9,15 +9,10 @@ print(random_monster)
 random_monster.take_damage(4)
 print(random_monster)
 
-ugly_troll = Troll()
+# doing this a new troll object is created with its name being blargh, and it will
+# have the lives and hit points from the enemy class because the super class
+# init is being called from the subclass
+ugly_troll = Troll("blargh")
 print("ugly troll - {}".format(ugly_troll))
 
-
-another_troll = Troll("ug", 18, 1)
-print("another troll - {}".format(another_troll), end="")
-
-brother = Troll("urg", 23)
-print(brother)
-
-# overloading a method - you provide a method with exactly the same name, but with different arguements
-# python doesnt have the concept of overloaded methods
+ugly_troll.grunt()

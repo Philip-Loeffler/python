@@ -22,4 +22,11 @@ class Enemy:
 
 # this is how you create a subclass. Troll is inheriting from enemy
 class Troll(Enemy):
-    pass
+    # when you create a troll object, you will give it a specific name.
+    # and the lives and hit points will be added to it from the super class
+    # because of the super class init method in the subclass
+    def __init__(self, name):
+        super().__init__(name=name, lives=1, hit_points=23)
+
+    def grunt(self):
+        print("me {0.name}. {0.name} stomp you".format(self))
